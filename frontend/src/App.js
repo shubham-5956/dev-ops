@@ -10,6 +10,8 @@ function App() {
       .then(data => setMsg(data.message));
   }, []);
 
+  let temp="unused";
+
   return (
     <div>
       <h1>Client-Server Docker App</h1>
