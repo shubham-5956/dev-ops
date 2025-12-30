@@ -10,7 +10,7 @@ function App() {
       .then(data => setMsg(data.message));
   }, []);
 
-  let temp="unused";
+  // let temp="unused";
 
   return (
     <div>
