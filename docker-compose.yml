@@ -3,14 +3,24 @@ version: "3.8"
 
 services:
   backend:
-    build: ./backend
-    restart: always
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    networks:
+      - dev-ops-net
+    restart: unless-stopped
     ports:
       - "5000:5000"
 
   frontend:
-    build: ./frontend
-    restart: always
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    networks:
+      - dev-ops-net
+    restart: unless-stopped
     ports:
       - "3000:3000"
     depends_on:
