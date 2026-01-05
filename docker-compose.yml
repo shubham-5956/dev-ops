@@ -1,8 +1,8 @@
 services:
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    # build:
+    #   context: ./backend
+    #   dockerfile: Dockerfile
     container_name: backend
     # networks:
     #   - dev-ops-net
@@ -11,9 +11,9 @@ services:
       - "5000:5000"
 
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+    # build:
+    #   context: ./frontend
+    #   dockerfile: Dockerfile
     container_name: frontend
     # networks:
     #   - dev-ops-net
