@@ -33,7 +33,7 @@ pipeline {
                     docker compose down || true
 
                     echo "Starting Dev-ops project with Docker Compose ..."
-                    docker compose up -d --build
+                    docker compose up -d 
 
                     echo "Showing running containers..."
                     docker ps
